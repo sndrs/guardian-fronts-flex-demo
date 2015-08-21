@@ -10,5 +10,5 @@ https://www.browserstack.com/screenshots/555b2b344a7e756b30a808a34f46591c894a4f4
 ### Development
 `gulp`
 
-### Pushlish to github pages
+### Publish to github pages
 `gulp publish`
