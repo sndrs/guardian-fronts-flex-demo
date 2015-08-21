@@ -20,8 +20,8 @@ $meta-height: 1rem;
     @media (min-width: 740px) {
         width: 25%;
 
-	    max-width: none;
-	    margin: 0;
+        max-width: none;
+        margin: 0;
 
         &:nth-child(5n) {
             clear: left;
