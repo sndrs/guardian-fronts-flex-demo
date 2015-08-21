@@ -1,0 +1,85 @@
+$meta-height: 1rem;
+// slice/item layout
+.row {
+    .has-flex-wrap & {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.item {
+    width: 100%;
+    float: left;
+
+    @media (min-width: 740px) {
+        width: 25%;
+
+        &:nth-child(5n) {
+            clear: left;
+        }
+    }
+}
+
+.meta {
+    height: $meta-height;
+    position: absolute;
+    bottom: 0;
+}
+
+// the rest of the these rules are just for demo purporses
+* {
+    margin: 0;
+    padding: 0;
+    background-color: fade-out(black, .9);
+    box-sizing: border-box;
+    color: transparent;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    padding-bottom: $meta-height * 2;
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+    outline: 1px solid white;
+
+    @media (min-width: 740px) {
+	    max-width: none;
+	    margin: 0;
+    }
+}
+
+.image {
+    height: 150px;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.header {
+    display: inline;
+    font-size: 2rem;
+
+    &:after {
+        content: '';
+        display: table;
+    }
+}
+
+.standfirst {
+    display: inline;
+    font-size: .9rem;
+    line-height: 1;
+
+    &:after {
+        content: '';
+        display: table;
+    }
+}
+
+.meta {
+    font-size: .7rem;
+}
