@@ -27,3 +27,15 @@ gulp.task('sass', () =>
         .pipe(gulp.dest('.'))
         .pipe(browserSync.stream())
 )
+
+import ghPages from 'gulp-gh-pages';
+
+gulp.task('publish', ['sass'], function() {
+  return gulp.src([
+      'style.css',
+      'index.html'
+    ])
+    .pipe(ghPages({
+        force: true
+    }));
+});
