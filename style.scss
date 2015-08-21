@@ -1,5 +1,6 @@
 $meta-height: 1rem;
-// slice/item layout
+
+// slice/item layout rules
 .row {
     .has-flex-wrap & {
         display: flex;
@@ -11,8 +12,16 @@ $meta-height: 1rem;
     width: 100%;
     float: left;
 
+    padding-bottom: $meta-height * 2;
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+
     @media (min-width: 740px) {
         width: 25%;
+
+	    max-width: none;
+	    margin: 0;
 
         &:nth-child(5n) {
             clear: left;
@@ -26,7 +35,7 @@ $meta-height: 1rem;
     bottom: 0;
 }
 
-// the rest of the these rules are just for demo purporses
+// the rest of the these rules are just for display purporses
 * {
     margin: 0;
     padding: 0;
@@ -41,16 +50,7 @@ ul {
 }
 
 .item {
-    padding-bottom: $meta-height * 2;
-    position: relative;
-    max-width: 620px;
-    margin: 0 auto;
     outline: 1px solid white;
-
-    @media (min-width: 740px) {
-	    max-width: none;
-	    margin: 0;
-    }
 }
 
 .image {
